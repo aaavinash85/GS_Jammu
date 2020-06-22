@@ -1,0 +1,631 @@
+/*---------------------------------------------------------------
+ header css 
+ ----------------------------------------------------------------*/
+
+#header {
+    padding: 18px 136px 0 76px;
+    height: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 997;
+}
+
+#header #logo {
+    float: left;
+}
+
+#header #logo h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 6px 0;
+    line-height: 1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#header #logo h1 a,
+#header #logo h1 a:hover {
+    color: #fff;
+}
+
+#header #logo img {
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #header #logo h1 {
+        font-size: 26px;
+    }
+    #header #logo img {
+        max-height: 40px;
+    }
+}
+
+#header.header-fixed {
+    background: rgba(52, 59, 64, 0.9);
+    padding: 20px 0;
+    height: 72px;
+    transition: all 0.5s;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+
+/* Nav Menu Essentials */
+
+.nav-menu,
+.nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu {
+    margin-top: 15px;
+}
+
+.nav-menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+}
+
+.nav-menu li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-menu>li {
+    float: left;
+}
+
+.nav-menu li:hover>ul,
+.nav-menu li.sfHover>ul {
+    display: block;
+}
+
+.nav-menu ul ul {
+    top: 0;
+    left: 100%;
+}
+
+.nav-menu ul li {
+    min-width: 180px;
+}
+
+
+/* Nav Menu Arrows */
+
+.sf-arrows .sf-with-ul {
+    padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+    content: "\f107";
+    position: absolute;
+    right: 15px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+    content: "\f105";
+}
+
+
+/* Nav Meu Container */
+
+#nav-menu-container {
+    float: right;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #nav-menu-container {
+        display: none;
+    }
+}
+
+
+/* Nav Meu Styling */
+
+.nav-menu a {
+    padding: 0 8px 10px 8px;
+    text-decoration: none;
+    display: inline-block;
+    color: #FF5300;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    outline: none;
+}
+
+.nav-menu>li {
+    margin-left: 10px;
+}
+
+.nav-menu>li>a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before,
+.nav-menu li:hover>a:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.nav-menu ul {
+    margin: 4px 0 0 0;
+    border: 1px solid #e7e7e7;
+}
+
+.nav-menu ul li {
+    background: #fff;
+}
+
+.nav-menu ul li:first-child {
+    border-top: 0;
+}
+
+.nav-menu ul li a {
+    padding: 10px;
+    color: #333;
+    transition: 0.3s;
+    display: block;
+    font-size: 13px;
+    text-transform: none;
+}
+
+.nav-menu ul li a:hover {
+    background: rgb(244, 100, 31);
+    color: #fff;
+}
+
+.nav-menu ul ul {
+    margin: 0;
+}
+
+
+/* Mobile Nav Toggle */
+
+#mobile-nav-toggle {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin: 20px 20px 0 0;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    display: none;
+    transition: all 0.4s;
+    outline: none;
+    cursor: pointer;
+}
+
+#mobile-nav-toggle i {
+    color: #FF5300;
+}
+
+@media (max-width: 768px) {
+    #mobile-nav-toggle {
+        display: inline;
+    }
+}
+
+
+/* Mobile Nav Styling */
+
+#mobile-nav {
+    position: fixed;
+    top: 0;
+    padding-top: 18px;
+    bottom: 0;
+    z-index: 998;
+    background: rgba(52, 59, 64, 0.9);
+    left: -260px;
+    width: 260px;
+    overflow-y: auto;
+    transition: 0.4s;
+}
+
+#mobile-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#mobile-nav ul li {
+    position: relative;
+}
+
+#mobile-nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 10px 22px 10px 15px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    outline: none;
+}
+
+#mobile-nav ul li a:hover {
+    color: #fff;
+}
+
+#mobile-nav ul li li {
+    padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+    color: rgb(244, 100, 31);
+}
+
+#mobile-nav ul .menu-item-active {
+    color: rgb(244, 100, 31);
+}
+
+#mobile-body-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(52, 59, 64, 0.9);
+    display: none;
+}
+
+
+/* Mobile Nav body classes */
+
+body.mobile-nav-active {
+    overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+    left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+    color: #fff;
+}
+
+
+/* ---------------------------------------------------------------------------------
+    Events Page CSS
+--------------------------------------------------------------------------------- */
+
+body {
+    background: linear-gradient(90deg, #FFFFFF 90.84%, #FF5300 90.92%);
+}
+
+#events-page {
+    margin: 83px 76px 0 76px;
+}
+
+.title-scroll {
+    min-height: 104px;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.btn-title {
+    font-family: 'Oswald', sans-serif;
+    background: transparent;
+    color: #FF5300;
+    font-size: 27px;
+    font-weight: normal;
+    border: none;
+    margin-left: 20px;
+    transition: all 0.5s;
+}
+
+.focused {
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.transfer {
+    position: relative;
+    left: 390px;
+}
+
+.temp-hover::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #FF5300;
+    transition: all 0.5s;
+}
+
+.temp-hover:hover::after {
+    width: 100%;
+}
+
+#page-202,
+#page-2019 {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, auto));
+    grid-auto-rows: minmax(144px, auto);
+    column-gap: 20px;
+    row-gap: 25px;
+}
+
+@media screen and (min-width: 696px) {
+    .active {
+        grid-row: 1 / 3;
+        grid-column: 1 / 3;
+    }
+}
+
+@media screen and (max-width: 696px) {
+    #events-page {
+        margin: 83px 30px;
+        margin-bottom: 0;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows: minmax(144px, auto);
+        row-gap: 25px;
+        column-gap: 0;
+    }
+    .active {
+        grid-row: 1 / 3;
+        grid-column: 1 / 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title-scroll {
+        min-height: 75px;
+    }
+    .focused {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        background: #FFFFFF;
+    }
+    .title-scroll {
+        min-height: 60px;
+    }
+    .btn-title {
+        font-size: 22px;
+    }
+    .focused {
+        font-size: 40px;
+    }
+    .grid-container {
+        grid-auto-rows: minmax(105px, auto);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #events-page {
+        margin: 83px 30px 0;
+    }
+    .title-scroll {
+        min-height: 47px;
+    }
+    .btn-title {
+        font-size: 19px;
+    }
+    .focused {
+        font-size: 30px;
+    }
+    .grid-container {
+        grid-auto-rows: minmax(86px, auto);
+    }
+}
+
+@media screen and (max-width: 335px) {
+    .btn-title {
+        margin-left: 9px;
+    }
+}
+
+.active {
+    grid-row: 1 / 3;
+}
+
+.active .event-details {
+    height: 50px;
+}
+
+.evt-container {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background: url(../img/person-in-front-of-laptop-on-brown-wooden-table-2115217.jpg);
+    background-size: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.event-details {
+    min-width: 100%;
+    height: 71px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding-left: 10px;
+    border-radius: 0 0 6px 6px;
+}
+
+.event-details div:first-child {
+    align-self: center;
+}
+
+.event-details .event-title {
+    font-size: 18px;
+    font-weight: 500;
+    background: linear-gradient(47.67deg, #FFB800 11.99%, #FF5300 110.86%);
+    background: -webkit-linear-gradient(47.67deg, #FFB800 11.99%, #FF5300 110.86%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    line-height: 21px;
+    margin-bottom: 5px;
+}
+
+.event-details .event-timing {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: -4px;
+}
+
+.event-details .svg-inline--fa {
+    color: #FF5300;
+}
+
+.event-details .event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 57px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background: linear-gradient(81.84deg, #FFB800 11.99%, #FF5300 110.86%);
+    border-radius: 0 0 6px 0;
+}
+
+.event-date .date {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.event-date .month {
+    margin-top: -8px;
+}
+
+/* --------------------------------------------------------------------------
+    background images of cards
+-------------------------------------------------------------------------- */
+
+#page-2020 .container01 {
+    background-image: url(../events-img/canva-13-14-15may2020.jpg);
+}
+#page-2020 .container02 {
+    background-image: url(../events-img/gs-turns-3-2june2020.jpg);
+}
+#page-2020 .container03 {
+    background-image: url(../events-img/live-on-insta-31may.jpg);
+}
+#page-2020 .container04 {
+    background-image: url(../events-img/python-workshop-25-5june2020.jpg);
+}
+#page-2020 .container05 {
+    background-image: url(../events-img/pandemic-report.jpg);
+}
+#page-2020 .container06 {
+    background-image: url(../events-img/we-conclave-6-7june2020.jpg);
+}
+#page-2020 .container07 {
+    background-image: url(../events-img/python-workshop-batch3-21may2020.jpg);
+}
+#page-2020 .container08 {
+    background-image: url(../events-img/cloud-titans.jpg);
+}
+#page-2020 .container09 {
+    background-image: url(../events-img/vocal-for-local-edu.jpg);
+}
+#page-2020 .container10 {
+    background-image: url(../events-img/hacktheory-10-17-24may2020.jpg);
+}
+#page-2020 .container11 {
+    background-image: url(../events-img/tech-x-factor-26april2020.jpg);
+}
+#page-2020 .container12 {
+    background-image: url(../events-img/pythonX-11-12april2020.jpg);
+}
+#page-2020 .container13 {
+    background-image: url(../events-img/covid-program-batch2-2020.jpg);
+}
+#page-2020 .container14 {
+    background-image: url(../events-img/contributors-meet-2020.jpg);
+}
+#page-2020 .container15 {
+    background-image: url(../events-img/progate-learning-weekend-6-8mar2020.jpg);
+}
+#page-2020 .container16 {
+    background-image: url(../events-img/cfpday-24jan2020.jpg);
+}
+
+
+#page-2019 .container01 {
+    background-image: url(../events-img/edu-outreach-batch3-21-22-23may.jpg);
+}
+#page-2019 .container02 {
+    background-image: url(../events-img/gs-edu-scholarship.jpg);
+}
+#page-2019 .container03 {
+    background-image: url(../events-img/gs-donation.jpg);
+}
+#page-2019 .container04 {
+    background-image: url(../events-img/hacktoberfest2019-oct.png);
+}
+#page-2019 .container05 {
+    background-image: url(../events-img/gsjandkh-first-anni.jpg);
+}
+#page-2019 .container06 {
+    background-image: url(../events-img/aiworkshop-15nov2019.jpg);
+}
+#page-2019 .container07 {
+    background-image: url(../events-img/workshopSMVDU.jpg);
+}
+#page-2019 .container08 {
+    background-image: url(../events-img/exploreml-09-10nov2019.jpg);
+}
+#page-2019 .container09 {
+    background-image: url(../events-img/indiasummit2019.jpg);
+}
